@@ -1,0 +1,78 @@
+#Hover-Test:hover{
+    color:green;
+    font-size: 50px;
+}
+#Hover-Test {
+    color: red;
+}
+
+
+/*
+h1:first-child{/*Selects the 1st element of each section or div *//*
+    color: blue;
+}*/
+h1:nth-child(even):hover{ /*Selects the 2nd element of each section or div */
+    color: yellow;
+}
+
+h1:nth-child(odd){/*Selects every odd element of each section or div */
+    font-size:50px;
+}
+/*
+h1:nth-child(3n+1){/*Every 4th element as long as it's a h1*//*
+    font-size: 25px;
+}*/
+h1:nth-of-type(odd):hover{/*Similar to nth-child but does let other element types effect the count.*/
+    color:greenyellow;
+}
+/*nth-of-type works basically the same but does let other element types effect the count. GET CLARIFICATION*/
+
+.empty p:empty{/*Selects each P element that is empty in the class called empty*/
+    outline:2px solid orange;
+}/*
+.only h1:only-child{/*Only works with a parent that has one child*//*
+    color:hotpink;
+}*/
+.only h1:only-of-type{/*Works if the parent has other children but only if they aren't of the same element*/
+    color:hotpink;
+}
+
+h4:not(.not){ /*No clue*/
+    color:red;
+}
+
+.lorem p::first-line{
+    font-style: italic;
+    font-size: 25px;
+}
+.lorem p::first-letter{
+
+    font-size: 35px;
+}
+p::before{/*Allows adding text before each P element*/
+    content:':D'
+}
+[class~="mydiv"]{/*if the div or element class has mydiv as a seperate word*/
+    color: blueviolet;
+}
+[class^="mr"]{/*if the div or element class has mr somewhere in the class name*/
+    color: lightcoral;
+}
+[href^="https://"]{/*if the a element href has https:// somewhere in the class name*/
+    font-size: 25px;
+}
+[class$="ham"] { /*If the class name ends with ham*/
+    background: yellow;
+}
+[class*="iv"]{/*if the div or element class has iv somewhere in the class name*/
+    color: blueviolet;
+}
+
+a[target="_blank"] {
+    background-color: yellow;
+  }
+
+/* I have this because I only have like 3 lines for each div
+h1:last-of-type{/*Selects the last element of each section or div*//*
+    font-size:5px;
+}*/
